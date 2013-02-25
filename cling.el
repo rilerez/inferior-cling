@@ -4,7 +4,7 @@
   "Move to the buffer containing Cling, or create one if it does not exist. Defaults to C++11"
   (interactive)
   (let ((flags (or flags "-std=c++11"))) 
-    (make-comint "inferior-cling" "cling</3" nil flags)
+    (make-comint "inferior-cling" "cling" nil flags)
     (switch-to-buffer "*inferior-cling*")))
 
 (defun cling-send-string (string &optional process)
