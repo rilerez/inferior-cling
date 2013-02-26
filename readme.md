@@ -9,7 +9,7 @@ To provide an Emacs minor mode for interactive C/C++ development using ROOT's Cl
 Status
 ------
 
-As of now, this project only contains elisp functions that send code from a C++ file to the cling interpreter. This facilitates
+As of now, this project only contains elisp functions that send code from a C++ file to the cling interpreter. This facilitates interactively writing and testing C++ files.
 
 Keybindings
 -----------
