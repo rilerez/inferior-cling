@@ -48,6 +48,6 @@ Adding to .emacs
 To always load `cling.el`, 
 * save cling.el to a directory in emacs's `load-path`. This can be done by saving cling.el to the `site-lisp` directory or by adding `(add-to-list 'load-path "PATH/TO/cling.el")` to your .emacs
 * require cling 
-```elisp
+```
 (require 'cling)
 ```
