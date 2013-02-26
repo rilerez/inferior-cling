@@ -69,5 +69,7 @@
   "Toggle inferior-cling-mode. Interactively w/o arguments, this command toggles the mode. A positive prefix argument enables it, and any other prefix argument disables it. 
 
 When inferior-cling-mode is enabled, we rebind keys to facilitate working with cling."
-  :keymap
-  inferior-cling-keymap)
+  :keymap inferior-cling-keymap)
+
+
+(provide 'cling)

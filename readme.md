@@ -29,3 +29,24 @@ Todo
 - [ ] add sane keybindings
 - [ ] work around Cling's inability to redefine functions 
 - [ ] work around Cling's tendency to crash
+
+Installation
+============
+Prerequisites
+---------------
+Cling (http://root.cern.ch/drupal/content/cling) must be downloaded and on the path for `cling.el` to work. Binary downloads can be found here (https://ecsft.cern.ch/dist/cling/current/). ROOT also provides instructiosn for building from source, and binary or source packages can be found in some distributions' package managers. 
+
+Loading for one session
+-------------------------
+To load the file for one session, execute the command
+```elisp
+(load "PATH/TO/cling.el")
+```
+
+Adding to .emacs
+-----------------
+To always load `cling.el`, 
+save cling.el to a directory in emacs's `load-path`. This can be done by saving cling.el to the `site-lisp` directory or by adding `(add-to-list 'load-path "PATH/TO/cling.el") to your .emacs
+```elisp
+(require 'cling)
+```
