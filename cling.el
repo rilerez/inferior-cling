@@ -58,9 +58,16 @@
     (undo)
     (undo)));;;this is a rather leaky way of doing temporary changes. there should be some way to save buffer contents or something
 ;;;probably uses with-temp-buffer
-(defvar cling-key-map
-  (let ((map (make-sparse-keymap)))
-    (define-key map "\C-c\C-r" 'cling-send-region)
+
+(defvar inferior-cling-keymap
+  (let ((map (current-global-map)))
+    (define-key map (kbd "C-c r") 'cling-send-region)
+    (define-key map (kbd "C-c d") 'cling-wrap-defun-and-send)
     map))
 
+(define-minor-mode inferior-cling-mode
+  "Toggle inferior-cling-mode. Interactively w/o arguments, this command toggles the mode. A positive prefix argument enables it, and any other prefix argument disables it. 
 
+When inferior-cling-mode is enabled, we rebind keys to facilitate working with cling."
+  :keymap
+  inferior-cling-keymap)
